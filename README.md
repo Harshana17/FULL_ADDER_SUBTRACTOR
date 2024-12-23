@@ -38,18 +38,100 @@ Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
 
+**FULL ADDER**
+
+![WhatsApp Image 2024-12-23 at 23 21 37_d36aa54c](https://github.com/user-attachments/assets/9dfa44d2-efa2-4360-8843-330ee38f8ad5)
+
+**FULL SUBTRACTOR**
+
+![WhatsApp Image 2024-12-23 at 23 22 21_9f9b1d6d](https://github.com/user-attachments/assets/b583babd-b283-4900-8c39-c83503156eb3)
+
+
+
 **Procedure**
 
-Write the detailed procedure here
+**Full adder:**
+
+1.Open Quartus II and create a new project.
+
+2.Use schematic design entry to draw the full adder circuit.
+
+3.The circuit consists of XOR,AND,and OR gates.
+
+4.Compile the design,verify its functionality through simulation.
+
+5.Implement the design on the target device and program it.
+
+**Full Subtractor:**
+
+1.Follow the same steps as for the full adder.
+
+2.Draw the full subtractor circuit using schematic design.
+
+3.The circuit includes XOR,AND,OR gates to perform subtraction.
+
+4.Compile,simulate,implement and program the design similarly to the full adder.
 
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
 
-**RTL Schematic**
+Developed by: Harshana M V
 
-**Output Timing Waveform**
+RegisterNumber:24002128
+
+i)FULL ADDER
+
+module fa(a,b,cin,sum,carry);
+
+input a,b,cin;
+
+output sum,carry;
+
+assign sum=( (a ^ b)^cin);
+
+assign carry= ( (a & b)| ( cin &(a ^ b )));
+
+endmodule
+
+ii)FULL SUBTRACTOR
+
+module fs(a,b,bin,difference,borrow);
+
+input a,b,bin;
+
+output difference,borrow;
+
+assign difference= ( (a ^ b)^bin);
+
+assign borrow= ( ( ~a & b)| ( bin & (~(a ^ b ))));
+
+endmodule
+
+
+
+**RTL**
+
+**FULL ADDER**
+
+![WhatsApp Image 2024-12-23 at 23 08 54_56275bc9](https://github.com/user-attachments/assets/9416bf6e-6126-400b-b10e-03fe692a03d1)
+
+**FULL SUBTRACTOR**
+
+![WhatsApp Image 2024-12-23 at 23 09 19_522ea495](https://github.com/user-attachments/assets/d7d3f710-b7b8-45ae-b2cc-15b18e689ba6)
+
+
+**Output**
+
+**FULL ADDER**
+
+![WhatsApp Image 2024-12-23 at 23 14 04_a9a5c50d](https://github.com/user-attachments/assets/3936caf9-91ce-4c50-94ec-c7155f877a71)
+
+**FULL SUBTRACTOR**
+
+![WhatsApp Image 2024-12-23 at 23 16 04_f0e333a5](https://github.com/user-attachments/assets/3ae24e89-b042-4394-a0c1-433915fb911e)
+
+
 
 **Result:**
 
